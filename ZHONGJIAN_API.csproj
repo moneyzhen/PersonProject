@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+    <UserSecretsId>86b5e0c8-525c-4e0a-8f58-d7725ba49733</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>.</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Model\Mobile\CommonArchDto.cs" />
+    <Compile Remove="Model\Mobile\MobileDto.cs" />
+    <Compile Remove="Model\Mobile\SeacrhArchParams.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.22" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.22" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.27" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="NLog" Version="4.7.13" />
+    <PackageReference Include="NLog.Config" Version="4.7.13" />
+    <PackageReference Include="NPOI" Version="2.5.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="EDoc2.IAppService">
+      <HintPath>bin\Debug\netcoreapp3.1\EDoc2.IAppService.dll</HintPath>
+    </Reference>
+    <Reference Include="EDoc2.Sdk">
+      <HintPath>bin\Debug\netcoreapp3.1\EDoc2.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="EDoc2.ServiceProxy">
+      <HintPath>bin\Debug\netcoreapp3.1\EDoc2.ServiceProxy.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
